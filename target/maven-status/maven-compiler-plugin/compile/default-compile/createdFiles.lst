@@ -1,0 +1,10 @@
+org/vaadin/artur/firebase/HasKey.class
+org/vaadin/artur/firebase/db/UserDB.class
+org/vaadin/artur/firebase/ui/FireUI.class
+org/vaadin/artur/firebase/db/Firebase$1.class
+org/vaadin/artur/firebase/db/Firebase.class
+org/vaadin/artur/firebase/ui/crud/UserForm.class
+org/vaadin/artur/firebase/ui/FireUI$MyUIServlet.class
+org/vaadin/artur/firebase/db/data/User.class
+org/vaadin/artur/firebase/FirebaseDataProvider.class
+org/vaadin/artur/firebase/ui/crud/CrudView.class

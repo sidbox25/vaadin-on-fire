@@ -33,7 +33,7 @@ public class Firebase {
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials
                         .fromStream(IOUtils.toInputStream(serviceAccount)))
-                .setDatabaseUrl("https://" + projectId + ".firebaseio.com")
+                .setDatabaseUrl("https://" + projectId + "-default-rtdb.firebaseio.com")
                 .build();
 
         app = FirebaseApp.initializeApp(options);
