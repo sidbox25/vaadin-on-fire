@@ -12,16 +12,20 @@ import com.vaadin.ui.VerticalLayout;
 public class UserForm extends VerticalLayout {
     private TextField name = new TextField("Name");
     private TextField age = new TextField("Age");
+    private TextField size = new TextField("Size");
     private Button save = new Button("Save");
     private String key;
     private Binder<User> binder;
 
     public UserForm() {
-        addComponents(name, age, save);
+        addComponents(name, age, size, save);
         binder = new Binder<>(User.class);
         binder.forField(age)
                 .withConverter(new StringToIntegerConverter(0, "Not a number"))
                 .bind("age");
+        binder.forField(size)
+                .withConverter(new StringToIntegerConverter(0, "Not a number"))
+                .bind("size");
         binder.bindInstanceFields(this);
 
         save.addClickListener(e -> {
@@ -45,7 +49,7 @@ public class UserForm extends VerticalLayout {
     private void saveItem() {
         User item = binder.getBean();
         if (key == null) {
-            UserDB.add(item);
+            UserDB.add(item); 
         } else {
             UserDB.update(key, item);
         }
