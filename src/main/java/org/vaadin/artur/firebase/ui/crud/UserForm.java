@@ -32,7 +32,7 @@ public class UserForm extends VerticalLayout {
     }
 
     public void newItem() {
-        setItem(null, new User("", 0));
+        setItem(null, new User("", 0, 0));
     }
 
     public void setItem(String key, User user) {

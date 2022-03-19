@@ -9,16 +9,18 @@ public class User implements HasKey {
 
     private String key;
     private String name;
+    private int size;
     private int age;
 
     public User() {
 
     }
 
-    public User(String name, int age) {
+    public User(String name, int age, int size) {
         super();
         this.name = name;
         this.age = age;
+        this.size = size;
     }
 
     public void setKey(String key) {
@@ -27,6 +29,14 @@ public class User implements HasKey {
 
     public String getKey() {
         return key;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 
     public String getName() {

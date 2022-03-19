@@ -21,8 +21,8 @@ public class UserDB {
             return;
         }
 
-        add(new User("Foo", 12));
-        add(new User("Bar", 56));
+        add(new User("Foo", 12, 0));
+        add(new User("Bar", 56, 0));
     }
 
     public static void add(User item) {
