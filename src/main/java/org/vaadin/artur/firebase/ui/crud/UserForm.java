@@ -7,18 +7,19 @@ import com.vaadin.data.Binder;
 import com.vaadin.data.converter.StringToIntegerConverter;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.HorizontalLayout;
 
-public class UserForm extends VerticalLayout {
+public class UserForm extends HorizontalLayout {
     private TextField name = new TextField("Name");
     private TextField age = new TextField("Age");
     private TextField size = new TextField("Size");
+    private TextField about = new TextField("About");
     private Button save = new Button("Save");
     private String key;
     private Binder<User> binder;
 
     public UserForm() {
-        addComponents(name, age, size, save);
+        addComponents(name, age, size, about, save);
         binder = new Binder<>(User.class);
         binder.forField(age)
                 .withConverter(new StringToIntegerConverter(0, "Not a number"))
@@ -36,7 +37,7 @@ public class UserForm extends VerticalLayout {
     }
 
     public void newItem() {
-        setItem(null, new User("", 0, 0));
+        setItem(null, new User("", 0, 0, ""));
     }
 
     public void setItem(String key, User user) {

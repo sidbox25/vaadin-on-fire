@@ -53,9 +53,9 @@ public class CrudView extends VerticalLayout {
 
             UserDB.delete(grid.getSelectedItems().iterator().next());
         });
-        Link link = new Link("https://github.com/Artur-/vaadin-on-fire",
+        Link link = new Link("https://github.com/sidbox25/vaadin-on-fire",
                 new ExternalResource(
-                        "https://github.com/Artur-/vaadin-on-fire"));
+                        "https://github.com/sidbox25/vaadin-on-fire"));
         link.setTargetName("_blank");
         addComponents(new Label(
                 "This is a simple CRUD which uses Firebase and push to support multiple users simultaneously editing the same data"),
