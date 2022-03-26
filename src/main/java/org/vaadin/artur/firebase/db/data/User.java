@@ -8,21 +8,25 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class User implements HasKey {
 
     private String key;
-    private String name;
-    private String about;
-    private int size;
-    private int age;
+    private String fach;
+    private String lehrer;
+    private String start;
+    private String ende;
+    private String beschreibung;
+
 
     public User() {
 
     }
 
-    public User(String name, int age, int size, String about) {
+    public User(String fach, String lehrer, String start, String ende, String beschreibung) {
         super();
-        this.name = name;
-        this.age = age;
-        this.size = size;
-        this.about = about;
+        this.fach = fach;
+        this.lehrer = lehrer;
+        this.start = start;
+        this.ende = ende;
+        this.beschreibung = beschreibung;
+        
     }
 
     public void setKey(String key) {
@@ -33,41 +37,43 @@ public class User implements HasKey {
         return key;
     }
 
-    public String getAbout() {
-        return about;
+    public String getbeschreibung() {
+        return beschreibung;
     }
 
-    public void setAbout(String about) {
-        this.about = about;
+    public void setbeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
     }
 
-    public int getSize() {
-        return size;
+    public String getLehrer() {
+        return lehrer;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setLehrer(String lehrer) {
+        this.lehrer = lehrer;
     }
 
-    public String getName() {
-        return name;
+    public String getFach() {
+        return fach;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFach(String fach) {
+        this.fach = fach;
     }
 
-    public int getAge() {
-        return age;
+    public String getStart() {
+        return start;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setStart(String start) {
+        this.start = start;
     }
 
-    @Override
-    public String toString() {
-        return "User [name=" + name + ", age=" + age + "]";
+    public String getEnde() {
+        return ende;
     }
 
+    public void setEnde(String ende) {
+        this.ende = ende;
+    }
 }
