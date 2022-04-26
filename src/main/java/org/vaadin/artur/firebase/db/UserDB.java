@@ -20,9 +20,6 @@ public class UserDB {
         if (snapshot.hasChild(DATABASE_NAMESPACE)) {
             return;
         }
-
-        add(new User("Foo", 12, 0, "filler1"));
-        add(new User("Bar", 56, 0, "filler2"));
     }
 
     public static void add(User item) {

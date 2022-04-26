@@ -10,6 +10,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.HorizontalLayout;
 
 public class UserForm extends HorizontalLayout {
+
     private TextField fach = new TextField("fach");
     private TextField lehrer = new TextField("lehrer");
     private TextField start = new TextField("start");
@@ -19,6 +20,7 @@ public class UserForm extends HorizontalLayout {
     private String key;
     private Binder<User> binder;
 
+    
     public UserForm() {
         addComponents(fach, lehrer, start, ende, beschreibung, save);
         binder = new Binder<>(User.class);
